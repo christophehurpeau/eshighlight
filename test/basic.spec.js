@@ -12,6 +12,13 @@ describe('highlight', function () {
         .toBe('<span class="keyword">var</span>   <span class="identifier">x</span>   <span class="operator">=</span> <span class="numeric">42</span>');
   });
 
+  it('should preserve empty lines', function () {
+    expect(highlight("var x = 42;\n\n var y = 43;"))
+        .toBe('<span class="keyword">var</span> <span class="identifier">x</span> <span class="operator">=</span> <span class="numeric">42</span>;'
+            + "\n\n"
+            + ' <span class="keyword">var</span> <span class="identifier">y</span> <span class="operator">=</span> <span class="numeric">43</span>;');
+  });
+
   it('should highlight params', function () {
     expect(highlight('function x (a){}'))
         .toBe('<span class="keyword">function</span> <span class="identifier">x</span> (<span class="param">a</span>){}');
