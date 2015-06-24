@@ -1,6 +1,6 @@
 {
   "name": "eshighlight-harmony",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "highlight javascript code based on an esprima AST",
   "main": "highlight.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "Brian Ford",
   "license": "MIT",
   "dependencies": {
-    "esprima": "git://github.com/ariya/esprima#harmony"
+    "esprima": "^2.3.0"
   },
   "devDependencies": {
     "jasmine-node": "1.14.2"
