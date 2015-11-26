@@ -1,4 +1,4 @@
-var esprima = require('esprima');
+var esprima = require('esprima-fb');
 
 var notControlFlow = [
   'var',
